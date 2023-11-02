@@ -16,22 +16,20 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: Column(
-          //mainAxisAlignment é eixo principal de alinhamentos,
-          //no caso de coluna é na vertical
-          mainAxisAlignment: MainAxisAlignment.center,
-          // crossAxisAlignment eixo orizontal da coluna
-          crossAxisAlignment: CrossAxisAlignment.start,
+        home: Row(
+          //Row significa linha
+          mainAxisAlignment: MainAxisAlignment.center, //eixo orizontal
+          crossAxisAlignment: CrossAxisAlignment.start, //eixo vertival
           children: [
             Container(
               color: Colors.black,
-              width: 300,
-              height: 300,
+              width: 100,
+              height: 100,
             ),
             Container(
               color: Colors.red,
-              width: 150,
-              height: 150,
+              width: 50,
+              height: 50,
             ),
           ],
         ));
