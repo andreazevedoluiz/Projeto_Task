@@ -86,6 +86,12 @@ class MyApp extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  print('VOCÊ APERTOU O BOTÃO');
+                },
+                child: Text('APERTE!'),
+              ),
             ],
           )),
     );
