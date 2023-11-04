@@ -37,10 +37,16 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Task extends StatelessWidget {
+class Task extends StatefulWidget {
   final String nome;
   const Task(this.nome, {super.key});
 
+  @override
+  State<Task> createState() => _TaskState();
+}
+
+class _TaskState extends State<Task> {
+  int nivel = 0;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -52,33 +58,46 @@ class Task extends StatelessWidget {
               color: Colors.blue,
               height: 140,
             ),
-            Container(
-              color: Colors.white,
-              height: 100,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    color: Colors.black26,
-                    width: 72,
-                    height: 100,
+            Column(
+              children: [
+                Container(
+                  color: Colors.white,
+                  height: 100,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        color: Colors.black26,
+                        width: 72,
+                        height: 100,
+                      ),
+                      Container(
+                        width: 200,
+                        child: Text(
+                          widget.nome,
+                          style: TextStyle(
+                              fontSize: 20,
+                              overflow: TextOverflow
+                                  .ellipsis //faz o texto ter uma maximo de caracteres
+                              ),
+                        ),
+                      ),
+                      ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              nivel++;
+                            });
+                          },
+                          child: Icon(Icons.arrow_drop_up)),
+                    ],
                   ),
-                  Container(
-                    width: 200,
-                    child: Text(
-                      nome,
-                      style: TextStyle(
-                          fontSize: 20,
-                          overflow: TextOverflow
-                              .ellipsis //faz o texto ter uma maximo de caracteres
-                          ),
-                    ),
-                  ),
-                  ElevatedButton(
-                      onPressed: () {}, child: Icon(Icons.arrow_drop_up)),
-                ],
-              ),
-            )
+                ),
+                Text(
+                  'Nivel $nivel',
+                  style: TextStyle(color: Colors.white, fontSize: 16),
+                ),
+              ],
+            ),
           ],
         ),
       ),
