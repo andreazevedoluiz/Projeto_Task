@@ -25,12 +25,14 @@ class MyApp extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            Task('Aprender flutter'),
-            Task('Andar de bike'),
-            Task('Meditaraaaaaaaaaaaaa'),
-            Task('Meditar'),
-            Task('Meditar'),
-            Task('Meditar'),
+            Task('Aprender flutter',
+                'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'),
+            Task('Andar de bike',
+                'https://tswbike.com/wp-content/uploads/2020/09/108034687_626160478000800_2490880540739582681_n-e1600200953343.jpg'),
+            Task('Meditar',
+                'https://manhattanmentalhealthcounseling.com/wp-content/uploads/2019/06/Top-5-Scientific-Findings-on-MeditationMindfulness-881x710.jpeg'),
+            Task('Ler',
+                'https://thebogotapost.com/wp-content/uploads/2017/06/636052464065850579-137719760_flyer-image-1.jpg'),
           ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
@@ -41,7 +43,8 @@ class MyApp extends StatelessWidget {
 
 class Task extends StatefulWidget {
   final String nome;
-  const Task(this.nome, {super.key});
+  final String foto;
+  const Task(this.nome, this.foto, {super.key});
 
   @override
   State<Task> createState() => _TaskState();
@@ -72,6 +75,10 @@ class _TaskState extends State<Task> {
                         color: Colors.black26,
                         width: 72,
                         height: 100,
+                        child: Image.network(
+                          widget.foto,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                       Container(
                         width: 200,
