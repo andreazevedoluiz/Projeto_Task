@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_alura/task.dart';
+import 'package:projeto_alura/components/task.dart';
 
 class InitialScreen extends StatefulWidget {
-  InitialScreen({super.key});
+  const InitialScreen({super.key});
 
   @override
   State<InitialScreen> createState() => _InitialScreenState();
@@ -16,13 +16,13 @@ class _InitialScreenState extends State<InitialScreen> {
       appBar: AppBar(
         leading: Container(),
         backgroundColor: Colors.blue,
-        title: Text("Tarefa"),
+        title: const Text("Tarefa"),
       ),
       body: AnimatedOpacity(
         opacity: opacidade ? 1 : 0,
-        duration: Duration(milliseconds: 1000),
+        duration: const Duration(milliseconds: 1000),
         child: ListView(
-          children: [
+          children: const [
             Task(
                 'Aprender flutter',
                 'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
@@ -48,7 +48,7 @@ class _InitialScreenState extends State<InitialScreen> {
             opacidade = !opacidade;
           });
         },
-        child: Icon(Icons.remove_red_eye),
+        child: const Icon(Icons.remove_red_eye),
       ),
     );
   }

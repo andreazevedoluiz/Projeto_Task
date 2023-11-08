@@ -66,7 +66,7 @@ class MyFirstWidget extends StatelessWidget {
               color: Colors.amberAccent,
               height: 30,
               width: 300,
-              child: Text(
+              child: const Text(
                 'Textando textos',
                 style: TextStyle(
                   color: Colors.black,
@@ -78,9 +78,9 @@ class MyFirstWidget extends StatelessWidget {
             ElevatedButton(
               //CRIANDO UM BOTÃO
               onPressed: () {
-                print('VOCÊ APERTOU O BOTÃO');
+                // print('VOCÊ APERTOU O BOTÃO');
               },
-              child: Text('APERTE!'),
+              child: const Text('APERTE!'),
             ),
           ],
         ));
