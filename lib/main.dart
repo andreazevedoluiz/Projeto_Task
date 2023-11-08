@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:projeto_alura/difficulty.dart';
 
 void main() {
   runApp(MyApp());
@@ -134,44 +135,8 @@ class _TaskState extends State<Task> {
                                   ),
                             ),
                           ),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                                color: (widget.dificuldade >= 1
-                                    ? Colors.blue
-                                    : Colors.blue[100]),
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                                color: (widget.dificuldade >= 2
-                                    ? Colors.blue
-                                    : Colors.blue[100]),
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                                color: (widget.dificuldade >= 3
-                                    ? Colors.blue
-                                    : Colors.blue[100]),
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                                color: (widget.dificuldade >= 4
-                                    ? Colors.blue
-                                    : Colors.blue[100]),
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                                color: (widget.dificuldade >= 5
-                                    ? Colors.blue
-                                    : Colors.blue[100]),
-                              ),
-                            ],
+                          Difficulty(
+                            difficultyLevel: widget.dificuldade,
                           )
                         ],
                       ),
