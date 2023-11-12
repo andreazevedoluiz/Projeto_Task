@@ -12,18 +12,31 @@ class FormScreen extends StatelessWidget {
       appBar: AppBar(
        leading: Container(),
         backgroundColor: Colors.blue,
-        title: const Text("Nova Tarefa",),
-        
+        title: const Text("Nova Tarefa", 
+        style: TextStyle(color: Colors.white),
+        ), 
       ),
       body: Center(
         child: Container(
-          height: 650,
-          width: 375,
+          height: 580,
+          width: 390,
           decoration: BoxDecoration(color:  Colors.black12,
           borderRadius: BorderRadius.circular(12),
           border: Border.all(width: 3)),
           child: Column(children: [
-            
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                textAlign: TextAlign.center,
+                decoration:InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'Nome',
+                  fillColor: Colors.white70,
+                  filled: true,
+                 ),
+              ),
+            ),
+
           ]),
         ),
       ),
