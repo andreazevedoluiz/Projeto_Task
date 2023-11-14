@@ -20,7 +20,7 @@ class _FormScreenState extends State<FormScreen> {
       key: _formKey,
       child: Scaffold(
         appBar: AppBar(
-          leading: Container(),
+          //leading: Container(),
           backgroundColor: Colors.blue,
           title: const Text(
             "Nova Tarefa",
@@ -131,10 +131,12 @@ class _FormScreenState extends State<FormScreen> {
                         print(int.parse(difficultyController.text));
                         print(imageController);
                         ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar( //cria um abviso na tela
-                                content: Text('Criando nova Tarefa'),
-                                ),
-                                  );
+                          const SnackBar(
+                            //cria um abviso na tela
+                            content: Text('Criando nova Tarefa'),
+                          ),
+                        );
+                        Navigator.pop(context);
                       }
                     },
                     child: Text('Adicionar'),
