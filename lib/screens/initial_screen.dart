@@ -16,7 +16,10 @@ class _InitialScreenState extends State<InitialScreen> {
       appBar: AppBar(
        // leading: Container(),
         backgroundColor: Colors.blue,
-        title: const Text("Tarefa"),
+         title: const Text(
+            "Tarefas",
+            style: TextStyle(color: Colors.white),
+          ),
       ),
       body: ListView(
         children: const [

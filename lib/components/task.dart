@@ -81,6 +81,7 @@ class _TaskState extends State<Task> {
                               nivel++;
                             });
                           },
+                          
                           child: const Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             crossAxisAlignment: CrossAxisAlignment.end,
@@ -88,10 +89,11 @@ class _TaskState extends State<Task> {
                               Icon(Icons.arrow_drop_up),
                               Text(
                                 'UP',
-                                style: TextStyle(fontSize: 10),
+                                style: TextStyle(fontSize: 10, textBaseline: TextBaseline.alphabetic),
                               ),
                             ],
-                          )),
+                          ),
+                          ),
                     ),
                   ],
                 ),
