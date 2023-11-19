@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_alura/components/difficulty.dart';
 
+// ignore: must_be_immutable
 class Task extends StatefulWidget {
   final String nome;
   final String foto;

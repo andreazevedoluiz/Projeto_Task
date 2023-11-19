@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_alura/components/task.dart';
 import 'package:projeto_alura/data/task_inherited.dart';
 import 'package:projeto_alura/screens/form_screen.dart';
 
@@ -24,8 +23,8 @@ class _InitialScreenState extends State<InitialScreen> {
           ),
       ),
       body: ListView(
+        padding: const EdgeInsets.only(top: 8, bottom: 70,),
         children:  TaskInherited.of(context).taskList,
-        padding: EdgeInsets.only(top: 8, bottom: 70,),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

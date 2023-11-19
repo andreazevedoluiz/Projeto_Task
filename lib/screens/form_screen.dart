@@ -7,6 +7,7 @@ class FormScreen extends StatefulWidget {
   final BuildContext taskContext;
 
   @override
+  // ignore: library_private_types_in_public_api
   _FormScreenState createState() => _FormScreenState();
 }
 
@@ -24,16 +25,14 @@ class _FormScreenState extends State<FormScreen> {
     return false;
   }
 
- /* bool difficultyValidatr(String? value){
-    if (value != null && value.isEmpty) {
-      if (int.parse(value) > 5 || int.parse(value) < 1) {
+  bool difficultyValidator(String? value){
+    if(value!.isEmpty || int.parse(value) > 5 ||
+        int.parse(value) < 1){
         return true;
-      }
-      return false;
     }
-  }*/
+    return false;
+  }
 
-  
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +71,7 @@ class _FormScreenState extends State<FormScreen> {
                       },
                       controller: nameController,
                       textAlign: TextAlign.center,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: 'Nome',
                         fillColor: Colors.white70,
@@ -84,9 +83,7 @@ class _FormScreenState extends State<FormScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
                       validator: (value) {
-                        if (value!.isEmpty ||
-                            int.parse(value) > 5 ||
-                            int.parse(value) < 1) {
+                        if (difficultyValidator(value)) {
                           return 'Insira uma dificuladade entre 1 e 5';
                         }
                         return null;
@@ -94,7 +91,7 @@ class _FormScreenState extends State<FormScreen> {
                       keyboardType: TextInputType.number,
                       controller: difficultyController,
                       textAlign: TextAlign.center,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: 'Dificuldade ',
                         fillColor: Colors.white70,
@@ -117,7 +114,7 @@ class _FormScreenState extends State<FormScreen> {
                       keyboardType: TextInputType.url,
                       controller: imageController,
                       textAlign: TextAlign.center,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: 'Imagem',
                         fillColor: Colors.white70,
@@ -164,7 +161,7 @@ class _FormScreenState extends State<FormScreen> {
                         Navigator.pop(context);
                       }
                     },
-                    child: Text('Adicionar'),
+                    child: const Text('Adicionar'),
                   ),
                 ],
               ),
