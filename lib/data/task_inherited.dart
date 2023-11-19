@@ -15,16 +15,15 @@ class TaskInherited extends InheritedWidget {
     taskList.add(Task(name, photo, difficulty));
   }
 
-  static InheritedWidget of(BuildContext context) {
-    final InheritedWidget? result =
-        context.dependOnInheritedWidgetOfExactType();
+  static TaskInherited of(BuildContext context) {
+    final TaskInherited? result =
+        context.dependOnInheritedWidgetOfExactType<TaskInherited>();
     assert(result != null, 'No TaskInherited found in context');
     return result!;
   }
 
   @override
-  bool updateShouldNotify(covariant InheritedWidget oldWidget) {
-    // TODO: implement updateShouldNotify
-    throw UnimplementedError();
+  bool updateShouldNotify(TaskInherited oldWidget) {
+    return oldWidget.taskList.length != taskList.length;
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_alura/components/task.dart';
+import 'package:projeto_alura/data/task_inherited.dart';
 import 'package:projeto_alura/screens/form_screen.dart';
+
 
 class InitialScreen extends StatefulWidget {
   const InitialScreen({super.key});
@@ -22,15 +24,7 @@ class _InitialScreenState extends State<InitialScreen> {
           ),
       ),
       body: ListView(
-        children: const [
-          Task('Aprender flutter', 'assets/images/mascote.png', 5),
-          Task('Andar de bike', 'assets/images/bike.jpg', 2),
-          Task('Meditar', 'assets/images/meditacao.jpeg', 3),
-          Task('Ler', 'assets/images/ler.jpg', 1),
-          SizedBox(
-            height: 80,
-          )
-        ],
+        children:  TaskInherited.of(context).taskList,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
