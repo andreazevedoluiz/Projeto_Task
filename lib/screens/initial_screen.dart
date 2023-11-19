@@ -29,7 +29,7 @@ class _InitialScreenState extends State<InitialScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => const FormScreen(),),);
+              context, MaterialPageRoute(builder: (context) =>  FormScreen(taskContext: context,),),);
         },
         child: const Icon(Icons.add),
       ),
