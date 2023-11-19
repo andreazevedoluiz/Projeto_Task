@@ -1,6 +1,6 @@
-# projeto_alura
+# Projeto_Task
 
-A new Flutter project.
+Projeto desenvolvido no curso da plataforma Alura.
 
 # Flutter: Controller, Navegação e Estados
 
