@@ -2,7 +2,22 @@
 
 A new Flutter project.
 
+# Flutter: Controller, Navegação e Estados
+
 ## Getting Started
+O Curso básico de Flutter que ensina aos estudantes como: 
+-> Criar multiplas telas 
+-> Navegar entre telas
+-> Produzir um Formulário
+-> Configurar Validação
+-> Compreender os conceitos básicos de Contexto e Estado
+
+This project is a starting point for a Flutter application.
+
+## 🔨 Projeto: Organizador de Tarefas
+
+O projeto do curso consiste em criar uma nova tela ao projeto Organizador de Tarefas, com o intuito de produzir um formulário que adiciona uma nova tarefa customizada!
+
 
 This project is a starting point for a Flutter application.
 
