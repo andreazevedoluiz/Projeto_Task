@@ -6,11 +6,11 @@ Projeto desenvolvido no curso da plataforma Alura.
 
 ## Getting Started
 O Curso básico de Flutter que ensina aos estudantes como: 
--> Criar multiplas telas 
--> Navegar entre telas
--> Produzir um Formulário
--> Configurar Validação
--> Compreender os conceitos básicos de Contexto e Estado
+- Criar multiplas telas 
+- Navegar entre telas
+- Produzir um Formulário
+- Configurar Validação
+- Compreender os conceitos básicos de Contexto e Estado
 
 This project is a starting point for a Flutter application.
 
